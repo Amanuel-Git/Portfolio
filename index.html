@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amanuel Minich | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#home">Amanuel Minich</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <nav class="nav-bar" id="mainNav">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#resume">Resume</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section class="hero" id="home">
+        <p class="hero-subtitle">Hello, I’m Amanuel</p>
+        <h1 class="hero-title">Computer Science Student &amp; Web Developer</h1>
+        <p class="hero-copy">
+          I design modern web experiences with clean interfaces, accessible layouts, and smooth interactions.
+          I build responsive portfolio sites, small applications, and project showcases using HTML, CSS, and JavaScript.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="resume.txt" download="Amanuel-Minich-Resume.txt">Download Resume</a>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="section-title">About Me</div>
+        <div class="section-card about-grid">
+          <div class="about-copy">
+            <p>
+              I am a Computer Science student from Bahir Dar University with a strong interest in building
+              polished and functional websites. I enjoy solving problems with well-structured code, modern design,
+              and reusable components.
+            </p>
+            <p>
+              My focus is on accessible interfaces, responsive layouts, and intuitive navigation that work beautifully
+              on desktop, tablet, and mobile screens.
+            </p>
+          </div>
+          <div>
+            <h3>Core Skills</h3>
+            <ul class="skill-list">
+              <li>HTML5 & CSS3</li>
+              <li>JavaScript</li>
+              <li>Responsive Design</li>
+              <li>Git & GitHub</li>
+              <li>UI/UX Basics</li>
+              <li>Web Accessibility</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="section-title">Projects</div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div>
+              <h3>Password Generator</h3>
+              <p>
+                A secure password generator with customizable length, symbol support, and live preview.
+                Designed to help users create strong credentials quickly.
+              </p>
+              <p class="project-meta">Tech: HTML, CSS, JavaScript</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Amanue_Git/password-generator" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" target="_blank" rel="noreferrer">Live demo</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <h3>Campus Issue Tracker</h3>
+              <p>
+                A project management interface for reporting and organizing campus issues with a polished
+                dashboard-style layout.
+              </p>
+              <p class="project-meta">Tech: HTML, CSS, JavaScript</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Amanue_Git/campus-issue-tracker" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" target="_blank" rel="noreferrer">Live demo</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <h3>Portfolio Redesign</h3>
+              <p>
+                A responsive portfolio website showcasing modern UI, smooth animations, and easy navigation
+                across devices.
+              </p>
+              <p class="project-meta">Tech: HTML, CSS, JavaScript</p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Amanue_Git/portfolio-redesign" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="#" target="_blank" rel="noreferrer">Live demo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="resume" id="resume">
+        <div class="section-title">Resume</div>
+        <div class="section-card resume-section">
+          <div class="resume-copy">
+            <p>
+              Download a quick summary resume that highlights my background, skills, and academic progress.
+              This includes my experience with web development and project work using front-end technologies.
+            </p>
+          </div>
+          <a class="btn btn-primary" id="resumeLink" href="resume.txt" download="Amanuel-Minich-Resume.txt">Download Resume</a>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="section-title">Contact</div>
+        <div class="contact-card contact-grid">
+          <div>
+            <p>
+              I’m available for freelance work, collaboration, or questions about my projects.
+              Send a message and I will reply as soon as possible.
+            </p>
+            <p><strong>Email:</strong> minichlamanuel5195@gmail.com</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Amanue_Git" target="_blank" rel="noreferrer">github.com/Amanue_Git</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/amanuel-minich" target="_blank" rel="noreferrer">linkedin.com/in/amanuel-minich</a></p>
+          </div>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="input-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project" required></textarea>
+            </div>
+            <div class="form-footer">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <span class="form-status" id="formStatus"></span>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://github.com/Amanue_Git" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/amanuel-minich" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <p>© 2026 Amanuel Minich • Built with HTML, CSS, and JavaScript</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

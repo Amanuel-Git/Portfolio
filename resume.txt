@@ -1,0 +1,25 @@
+Amanuel Minich
+Computer Science Student | Web Developer
+
+Contact:
+Email: minichlamanuel5195@gmail.com
+GitHub: https://github.com/Amanue-Git
+
+Summary:
+Driven computer science student with experience building modern web applications using HTML, CSS, JavaScript, and Git. Passionate about clean user experiences and efficient problem solving.
+
+Skills:
+- HTML5, CSS3, JavaScript
+- Git and GitHub collaboration
+- Project planning and deployment
+
+Experience:
+- Built interactive website prototypes with animation and smooth navigation.
+- landing pages, and small web applications.
+- Collaborated on projects using version control and clear documentation.
+
+Education:
+Bachelor of Science in Computer Science
+Bahir Dar University (ongoing)
+
+Thank you for reviewing my portfolio.
