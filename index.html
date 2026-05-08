@@ -9,17 +9,22 @@
 <body>
   <div class="page-shell">
     <header class="topbar">
-      <a class="brand" href="#home">Amanuel Minich</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      <a class="brand" href="#home">
+        <img class="brand-photo" src="profile-photo.png" alt="Clear portrait photo of Amanuel Minich" />
+        <span class="brand-name">Amanuel Minich</span>
+      </a>
+      <nav class="nav-bar" id="mainNav">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#resume">Resume(CV)</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+      </div>
     </header>
-
-    <nav class="nav-bar" id="mainNav">
-      <a class="nav-link active" href="#home">Home</a>
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#projects">Projects</a>
-      <a class="nav-link" href="#resume">Resume</a>
-      <a class="nav-link" href="#contact">Contact</a>
-    </nav>
 
     <main>
       <section class="hero" id="home">
@@ -31,7 +36,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Get in touch</a>
-          <a class="btn btn-secondary" href="resume.txt" download="Amanuel-Minich-Resume.txt">Download Resume</a>
+          <a class="btn btn-secondary" href="Amanuel_CV.pdf" download="Amanuel_CV.pdf">Download Resume(CV)</a>
         </div>
       </section>
 
@@ -52,12 +57,11 @@
           <div>
             <h3>Core Skills</h3>
             <ul class="skill-list">
-              <li>HTML5 & CSS3</li>
-              <li>JavaScript</li>
-              <li>Responsive Design</li>
-              <li>Git & GitHub</li>
-              <li>UI/UX Basics</li>
-              <li>Web Accessibility</li>
+              <li>Java and C++</li>
+              <li>HTML, CSS, JavaScript, React, Next.js, Express.js</li>
+              <li>Mobile App Dev't with Flutter Framework</li>
+              <li>Basic AI knowledge</li>
+              <li>Computer Skills</li>
             </ul>
           </div>
         </div>
@@ -76,53 +80,62 @@
               <p class="project-meta">Tech: HTML, CSS, JavaScript</p>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Amanue_Git/password-generator" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="#" target="_blank" rel="noreferrer">Live demo</a>
+              <a href="https://github.com/Amanuel-Git" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://passwordgenerator-five-wheat.vercel.app/" target="_blank" rel="noreferrer">Live demo</a>
             </div>
           </article>
 
           <article class="project-card">
             <div>
-              <h3>Campus Issue Tracker</h3>
+              <h3>GibiPulse</h3>
               <p>
-                A project management interface for reporting and organizing campus issues with a polished
-                dashboard-style layout.
+                Explore GibiPulse, developed by a group called 4Ever for a hackathon program provided by
+                Alyah Software, Askuala Link, and EthoDen. It is an AI-powered campus reporting platform
+                built for real-time issue tracking and smart workflow automation.
               </p>
-              <p class="project-meta">Tech: HTML, CSS, JavaScript</p>
+              <p class="project-meta">Framework: Next.js 16 (App Router & Turbopack)</p>
+              <p class="project-meta">Styling: Tailwind CSS + Shadcn UI (Semantic Native Dark Mode)</p>
+              <p class="project-meta">Database & Auth: Supabase (PostgreSQL & Storage Buckets)</p>
+              <p class="project-meta">AI Brain Engine: Groq Cloud API</p>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Amanue_Git/campus-issue-tracker" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="#" target="_blank" rel="noreferrer">Live demo</a>
+              <a href="https://github.com/Amanuel-Git" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://gibi-pulse.vercel.app/" target="_blank" rel="noreferrer">Live demo</a>
             </div>
           </article>
 
           <article class="project-card">
             <div>
-              <h3>Portfolio Redesign</h3>
+              <h3>Job_Application_Tracker</h3>
               <p>
-                A responsive portfolio website showcasing modern UI, smooth animations, and easy navigation
-                across devices.
+                This project helps students manage job applications by storing company name, applied role,
+                application status (Applied, Interview, Rejected, accepted), and recruiter or follow-up notes.
+                Recent updates include a fully interactive tracker UI with local persistence, status filtering,
+                and editable notes for each application.
               </p>
-              <p class="project-meta">Tech: HTML, CSS, JavaScript</p>
+              <p class="project-meta">Tech: React 19, Vite 4+, ESLint, Supabase</p>
+              <p class="project-meta">Features: add, filter, edit notes, update status, remove applications</p>
+              <p class="project-meta">Persistence: Supabase database for cross-device access</p>
+              <p class="project-meta">Config: Supabase URL and anon key in src/supabaseClient.js</p>
             </div>
             <div class="project-links">
-              <a href="https://github.com/Amanue_Git/portfolio-redesign" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="#" target="_blank" rel="noreferrer">Live demo</a>
+              <a href="https://github.com/Amanuel-Git" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://job-application-tracker-six-puce.vercel.app/" target="_blank" rel="noreferrer">Live demo</a>
             </div>
           </article>
         </div>
       </section>
 
       <section class="resume" id="resume">
-        <div class="section-title">Resume</div>
+        <div class="section-title">Resume(CV)</div>
         <div class="section-card resume-section">
           <div class="resume-copy">
             <p>
-              Download a quick summary resume that highlights my background, skills, and academic progress.
-              This includes my experience with web development and project work using front-end technologies.
+              Download my CV to see my background, skills, and project experience. I have a great passion to learn
+              more in modern web technologies and keep improving through practical development work.
             </p>
           </div>
-          <a class="btn btn-primary" id="resumeLink" href="resume.txt" download="Amanuel-Minich-Resume.txt">Download Resume</a>
+          <a class="btn btn-primary" id="resumeLink" href="Amanuel_CV.pdf" download="Amanuel_CV.pdf">Download Resume(CV)</a>
         </div>
       </section>
 
@@ -135,7 +148,8 @@
               Send a message and I will reply as soon as possible.
             </p>
             <p><strong>Email:</strong> minichlamanuel5195@gmail.com</p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/Amanue_Git" target="_blank" rel="noreferrer">github.com/Amanue_Git</a></p>
+            <p><strong>Phone:</strong> +251951956852 | +251907421298</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Amanuel-Git" target="_blank" rel="noreferrer">github.com/Amanuel-Git</a></p>
             <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/amanuel-minich" target="_blank" rel="noreferrer">linkedin.com/in/amanuel-minich</a></p>
           </div>
           <form class="contact-form" id="contactForm" novalidate>
@@ -162,7 +176,7 @@
 
     <footer class="footer">
       <div class="footer-links">
-        <a href="https://github.com/Amanue_Git" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://github.com/Amanuel-Git" target="_blank" rel="noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/amanuel-minich" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
       <p>© 2026 Amanuel Minich • Built with HTML, CSS, and JavaScript</p>

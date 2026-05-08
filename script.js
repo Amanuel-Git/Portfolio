@@ -1,6 +1,8 @@
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section[id]');
 const themeToggle = document.getElementById('themeToggle');
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
 const contactForm = document.getElementById('contactForm');
 const statusMessage = document.getElementById('formStatus');
 const resumeLink = document.getElementById('resumeLink');
@@ -12,7 +14,20 @@ function smoothScroll(event) {
 
   if (targetSection) {
     targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    closeMenu();
   }
+}
+
+function closeMenu() {
+  if (!mainNav || !menuToggle) return;
+  mainNav.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+}
+
+function toggleMenu() {
+  if (!mainNav || !menuToggle) return;
+  const isOpen = mainNav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
 }
 
 function updateActiveNav() {
@@ -79,6 +94,25 @@ navLinks.forEach((link) => link.addEventListener('click', smoothScroll));
 window.addEventListener('scroll', updateActiveNav);
 window.addEventListener('resize', updateActiveNav);
 contactForm.addEventListener('submit', validateForm);
+if (menuToggle) {
+  menuToggle.addEventListener('click', toggleMenu);
+}
+
+document.addEventListener('click', (event) => {
+  if (!mainNav || !menuToggle) return;
+  const clickedInsideMenu = mainNav.contains(event.target);
+  const clickedMenuButton = menuToggle.contains(event.target);
+  if (!clickedInsideMenu && !clickedMenuButton) {
+    closeMenu();
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeMenu();
+  }
+});
+
 themeToggle.addEventListener('click', () => {
   const currentMode = document.body.classList.contains('light') ? 'light' : 'dark';
   setTheme(currentMode === 'light' ? 'dark' : 'light');
