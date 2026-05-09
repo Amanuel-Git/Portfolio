@@ -62,32 +62,64 @@ function initTheme() {
   }
 }
 
+// ── EmailJS config ──────────────────────────────────────────────────────────
+const EMAILJS_PUBLIC_KEY  = 'Dt_BMGP5PRvqop2pZ';
+const EMAILJS_SERVICE_ID  = 'service_0psdzgd';
+const EMAILJS_TEMPLATE_ID = 'template_1jf8vjd';
+// ────────────────────────────────────────────────────────────────────────────
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+function setStatus(text, color) {
+  statusMessage.textContent = text;
+  statusMessage.style.color = color;
+}
+
 function validateForm(event) {
   event.preventDefault();
+
   const formData = new FormData(contactForm);
-  const name = formData.get('name').trim();
-  const email = formData.get('email').trim();
+  const name    = formData.get('name').trim();
+  const email   = formData.get('email').trim();
   const message = formData.get('message').trim();
 
   if (!name || !email || !message) {
-    statusMessage.textContent = 'Please complete every field before sending your message.';
-    statusMessage.style.color = '#f97316';
+    setStatus('Please complete every field before sending.', '#f97316');
     return;
   }
 
   if (!validateEmail(email)) {
-    statusMessage.textContent = 'Please enter a valid email address.';
-    statusMessage.style.color = '#f97316';
+    setStatus('Please enter a valid email address.', '#f97316');
     return;
   }
 
-  statusMessage.textContent = 'Thanks! Your message is ready to send. (Form handling can be connected to email or backend.)';
-  statusMessage.style.color = '#22c55e';
-  contactForm.reset();
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending…';
+  setStatus('', '');
+
+  emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+    name:    name,
+    email:   email,
+    message: message,
+    title:   'Portfolio Contact Form',
+  })
+  .then(() => {
+    setStatus('Message sent! I\'ll get back to you soon.', '#22c55e');
+    contactForm.reset();
+  })
+  .catch((error) => {
+    console.error('EmailJS error:', error);
+    setStatus('Something went wrong. Please try emailing me directly.', '#ef4444');
+  })
+  .finally(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+  });
 }
 
 navLinks.forEach((link) => link.addEventListener('click', smoothScroll));
